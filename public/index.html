@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070914">
+  <meta name="description" content="NOVA - Your futuristic AI assistant">
+
+  <title>NOVA AGENT | AI Assistant</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-icon">N</div>
+      <div>
+        <h2>NOVA</h2>
+        <span>INTELLIGENCE SYSTEM</span>
+      </div>
+    </div>
+
+    <button class="new-chat" id="newChat">
+      <span>＋</span> New Conversation
+    </button>
+
+    <div class="side-label">WORKSPACE</div>
+
+    <button class="nav-item active" data-page="chat">
+      <span>◈</span> AI Assistant
+    </button>
+
+    <button class="nav-item" data-page="coding">
+      <span>⌘</span> Coding Assistant
+    </button>
+
+    <button class="nav-item" data-page="image">
+      <span>▧</span> Image Studio
+    </button>
+
+    <div class="side-label">SYSTEM</div>
+
+    <div class="system-card">
+      <div class="status-dot"></div>
+      <div>
+        <strong>NOVA Core</strong>
+        <small id="connectionStatus">Checking connection...</small>
+      </div>
+    </div>
+
+    <div class="sidebar-bottom">
+      <div class="developer">
+        <div class="avatar">RS</div>
+        <div>
+          <strong>Rishikesh Singh</strong>
+          <small>Developer</small>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <header class="topbar">
+      <button class="menu-button" id="menuButton">☰</button>
+
+      <div class="top-title">
+        <span class="online-dot"></span>
+        <span id="pageTitle">NOVA AI Assistant</span>
+      </div>
+
+      <button class="clear-button" id="clearChat">
+        Clear Chat
+      </button>
+    </header>
+
+    <section class="chat-area" id="chatArea">
+
+      <div class="welcome" id="welcome">
+
+        <div class="robot-stage">
+
+          <div class="robot-glow"></div>
+
+          <div class="robot" id="robot">
+            <div class="robot-aura"></div>
+
+            <div class="robot-head">
+              <div class="antenna"></div>
+              <div class="robot-ear left"></div>
+              <div class="robot-ear right"></div>
+
+              <div class="robot-face">
+                <div class="eyes">
+                  <div class="eye"></div>
+                  <div class="eye"></div>
+                </div>
+                <div class="robot-mouth"></div>
+              </div>
+            </div>
+
+            <div class="robot-neck"></div>
+
+            <div class="robot-body">
+              <div class="chest-light"></div>
+              <div class="chest-ring"></div>
+              <div class="body-line"></div>
+            </div>
+
+            <div class="robot-arm left-arm"></div>
+            <div class="robot-arm right-arm"></div>
+
+            <div class="robot-shadow"></div>
+          </div>
+
+          <div class="robot-orbit orbit-one"></div>
+          <div class="robot-orbit orbit-two"></div>
+
+        </div>
+
+        <div class="welcome-text">
+          <div class="welcome-tag">YOUR INTELLIGENCE PARTNER</div>
+
+          <h1>Meet <span>NOVA</span></h1>
+
+          <p>
+            Your futuristic AI assistant.<br>
+            Ask anything. Create anything. Build anything.
+          </p>
+        </div>
+
+        <div class="suggestions">
+
+          <button class="suggestion" data-prompt="Explain artificial intelligence in simple language.">
+            <span>✦</span>
+            <strong>Learn AI</strong>
+            <small>Explore artificial intelligence</small>
+          </button>
+
+          <button class="suggestion" data-prompt="Help me write a professional website using HTML, CSS and JavaScript.">
+            <span>⌘</span>
+            <strong>Write Code</strong>
+            <small>Build something amazing</small>
+          </button>
+
+          <button class="suggestion" data-prompt="Give me five creative futuristic project ideas.">
+            <span>◈</span>
+            <strong>Get Ideas</strong>
+            <small>Discover new possibilities</small>
+          </button>
+
+        </div>
+      </div>
+
+      <div class="messages" id="messages"></div>
+
+    </section>
+
+    <section class="image-panel" id="imagePanel">
+      <div class="image-heading">
+        <span class="welcome-tag">NOVA CREATIVE LAB</span>
+        <h2>Image <span>Studio</span></h2>
+        <p>Describe an image and create your visual idea.</p>
+      </div>
+
+      <textarea
+        id="imagePrompt"
+        placeholder="Describe the image you want to create..."
+      ></textarea>
+
+      <button class="generate-button" id="generateImage">
+        ✦ Generate Image
+      </button>
+
+      <div id="imageResult" class="image-result"></div>
+
+      <small class="image-note">
+        Image generation uses an external image service.
+        Availability and its terms depend on that provider.
+      </small>
+    </section>
+
+    <footer class="input-section" id="inputSection">
+
+      <div class="input-box">
+        <textarea
+          id="userInput"
+          placeholder="Message NOVA..."
+          rows="1"
+        ></textarea>
+
+        <div class="input-actions">
+          <span class="input-hint">NOVA AI • Powered by Groq</span>
+
+          <button id="sendButton" class="send-button" aria-label="Send message">
+            ↑
+          </button>
+        </div>
+      </div>
+
+      <p class="disclaimer">
+        NOVA can make mistakes. Verify important information.
+      </p>
+
+    </footer>
+
+  </main>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
